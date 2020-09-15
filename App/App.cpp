@@ -919,7 +919,7 @@ int SGX_CDECL main(int argc, char *argv[])
     //jinhoon
     //resize vectors
     for(int i = 0 ; i < 5; i++){
-        secure_file[0].resize(100);
+        secure_file[i].resize(100);
     }
     
     /*
