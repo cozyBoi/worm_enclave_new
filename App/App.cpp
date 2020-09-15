@@ -360,7 +360,7 @@ void *scan_dir(void *select){  // 원래는 *dir_num을 받았음
                 }
                 
                 else if(choose -> mode != 1){ // verify
-                    
+                    printf("[scan_dir] mode == 2\n");
                     int len = strlen(myfile->d_name);
                     int hash_value = 0;
                     for(int i = 0; i < len; i++){
@@ -447,7 +447,7 @@ void verify_file(int flag) // flag:1 => re-read file meatdata, flag:2 => verify 
     }
     
     else if(flag ==2){ // verify mode
-        
+        printf("[verify_file] flag == 2, pass 2 to scan_dir");
         for(i=0; i<5; i++){
             two_mode[i].mode = 2;
             two_mode[i].directory_num = dir_num[i];
