@@ -207,7 +207,7 @@ int save_file_info(const char *name, const char *attr, const int * dir, const in
     for(int i = 0; i < len; i++){
         hash_value += name[i];
     }
-    
+    ocall_print_string("[debug] here3\n");
     ocall_pass_string(sealed_data, hash_value % 100, dir_index); //, hash value 도 보내자
     //passing
     

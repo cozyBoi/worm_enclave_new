@@ -262,9 +262,13 @@ void ocall_pass_string(unsigned char *str, int hash_value, int dir_index)
     //factory fucntion
     ret_encrypted_data = (unsigned char*)malloc(ENC_SIZE);
     memset(ret_encrypted_data, 0, ENC_SIZE);
+    ocall_print_string("[debug] here4\n");
     memcpy(ret_encrypted_data, str, ENC_SIZE);
+    ocall_print_string("[debug] here5\n");
     ret_hash_value = hash_value;
     secure_file[dir_index][hash_value].push_back(ret_encrypted_data);
+    ocall_print_string("[debug] here6\n");
+
     //jinhoon
     //memcpy passed value
 }
