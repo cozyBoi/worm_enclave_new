@@ -198,7 +198,9 @@ int save_file_info(const char *name, const char *attr, const int * dir, const in
     ocall_print_hex(marshalled_data, file_info_size);
     
     uint32_t plaintext_len = file_info_size;
+    ocall_print_string("[debug] here\n");
     sgx_seal_data((uint32_t)hmac_len, (uint8_t*)hmac_msg, plaintext_len, (uint8_t*)marshalled_data, sealed_size, (sgx_sealed_data_t*)sealed_data);
+    ocall_print_string("[debug] here2\n");
     //sealing
     int len = strlen(name);
     int hash_value = 0;
